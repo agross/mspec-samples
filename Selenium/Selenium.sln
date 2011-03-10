@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp", "LoginApp\LoginApp.csproj", "{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp.Specs", "LoginApp.Specs\LoginApp.Specs.csproj", "{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

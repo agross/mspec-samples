@@ -1,0 +1,9 @@
+# Lines that start with '#' are comments.
+
+bin
+Bin
+obj
+*.user
+*.suo
+_ReSharper.*
+_Report
