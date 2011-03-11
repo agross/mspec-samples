@@ -27,7 +27,7 @@ namespace LoginApp.Specs.Selenium
 			{
 				Selenium.Open("/Account/LogOn");
 				Selenium.Type("UserName", "admin");
-				Selenium.Type("Password", "secret2");
+				Selenium.Type("Password", "secret");
 				Selenium.Click("//input[@value='Log On']");
 				Selenium.WaitForPageToLoad("30000");
 			};
