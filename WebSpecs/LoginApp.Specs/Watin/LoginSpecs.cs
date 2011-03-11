@@ -8,18 +8,19 @@ namespace LoginApp.Specs.Watin
 	{
 		internal static Browser Browser;
 
-		protected static Browser CreateBrowser()
+		protected static void CreateBrowser()
 		{
 			Browser = new IE();
-			return Browser;
 		}
+
+		Cleanup after =
+			() => Browser.Close();
 	}
 
 	[Subject("Home page")]
 	public class When_on_home_page : WatinSpecs
 	{
-		Establish context =
-			() => CreateBrowser();
+		Establish context = CreateBrowser;
 
 		Because of = () =>
 			{
@@ -27,10 +28,7 @@ namespace LoginApp.Specs.Watin
 				Browser.WaitForComplete();
 			};
 
-		Cleanup after =
-			() => Browser.Close();
-
-		It should_show_add_details_link = 
+		It should_show_add_details_link =
 			() => Browser.Link(Find.ByText("Log On")).Exists.ShouldBeTrue();
 	}
 }
