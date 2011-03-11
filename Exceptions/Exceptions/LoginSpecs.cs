@@ -5,6 +5,7 @@ using Machine.Specifications;
 
 namespace Exceptions
 {
+	[Subject("Authentication")]
 	public class When_authenticating_a_user_without_providing_a_password
 	{
 		static AuthenticationService Service;

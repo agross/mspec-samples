@@ -13,7 +13,7 @@ namespace Behaviors
 
     Behaves_like<DateTimeParsingBehavior> a_date_time_parser;
 
-  	It should_not_fail =
+  	It should_succeed =
   		() => true.ShouldBeTrue();
   }
 
@@ -37,12 +37,8 @@ namespace Behaviors
   public class DateTimeParsingBehavior
   {
     protected static DateTime ParsedDate;
-	protected static IParser Parser;
 
     It should_parse_the_date = 
-		() =>
-			{
-				ParsedDate.ShouldEqual(new DateTime(2009, 1, 21));
-			};
+		() => ParsedDate.ShouldEqual(new DateTime(2009, 1, 21));
   }
 }
