@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp", "LoginApp\LoginApp.csproj", "{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp", "WebSpecs\LoginApp\LoginApp.csproj", "{F10ED753-C40A-4AFB-8E8F-95E1C10DBEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp.Specs", "LoginApp.Specs\LoginApp.Specs.csproj", "{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp.Specs", "WebSpecs\LoginApp.Specs\LoginApp.Specs.csproj", "{4E818C99-D4E4-4F53-90D4-EE0AFCD3E4A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
