@@ -1,1 +1,0 @@
-java -jar Selenium-Server\selenium-server-standalone-2.0b1.jar
