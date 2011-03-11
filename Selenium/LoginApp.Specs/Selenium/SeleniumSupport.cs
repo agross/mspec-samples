@@ -4,7 +4,7 @@ using Machine.Specifications.SeleniumSupport;
 
 using Selenium;
 
-namespace SeleniumSpecs
+namespace LoginApp.Specs.Selenium
 {
 	public class SeleniumSupport : SeleniumResultSupplementer
 	{
