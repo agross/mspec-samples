@@ -55,4 +55,22 @@ namespace LoginApp.Specs.Selenium
 			      	.GetText("//div[@class=\"validation-summary-errors\"]/span")
 			      	.ShouldEqual("Login was unsuccessful. Please correct the errors and try again.");
 	}
+	
+	[Subject("Selenium support")]
+	public class When_a_specification_fails : SeleniumSpecs
+	{
+		Establish context = CreateSelenium;
+
+		Because of = () =>
+		{
+			Selenium.Open("/Account/LogOn");
+			Selenium.Type("UserName", "haxor");
+			Selenium.Type("Password", "password");
+			Selenium.Click("//input[@value='Log On']");
+			Selenium.WaitForPageToLoad("30000");
+		};
+
+		It should_supply_screenshots_detailing_the_error =
+			() => true.ShouldBeFalse();
+	}
 }
