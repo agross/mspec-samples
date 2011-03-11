@@ -17,10 +17,7 @@ namespace SeleniumSpecs
 
 		protected override ISelenium Selenium
 		{
-			get
-			{
-				return SeleniumSpecs.Selenium;
-			}
+			get { return SeleniumSpecs.Selenium; }
 		}
 
 		static string GetTempPath()

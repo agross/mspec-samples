@@ -43,6 +43,9 @@
     <Reference Include="ThoughtWorks.Selenium.Core, Version=0.0.0.0, Culture=neutral">
       <HintPath>..\..\lib\MSpec\ThoughtWorks.Selenium.Core.dll</HintPath>
     </Reference>
+    <Reference Include="WatiN.Core">
+      <HintPath>..\..\lib\MSpec\WatiN.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginSpecs.cs" />

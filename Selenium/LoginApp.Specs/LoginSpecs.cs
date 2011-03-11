@@ -2,20 +2,22 @@ using Machine.Specifications;
 
 using Selenium;
 
+using WatiN.Core;
+
 namespace SeleniumSpecs
 {
 	public abstract class SeleniumSpecs
 	{
 		protected internal static ISelenium Selenium;
 
+		Cleanup after =
+			() => Selenium.Stop();
+
 		Establish context = () =>
 			{
 				Selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost:1337/");
 				Selenium.Start();
 			};
-
-		Cleanup after =
-			() => Selenium.Stop();
 	}
 
 	[Subject("Log in with valid credentials")]
@@ -50,5 +52,26 @@ namespace SeleniumSpecs
 			() => Selenium
 			      	.GetText("//div[@class=\"validation-summary-errors\"]/span")
 			      	.ShouldEqual("Login was unsuccessful. Please correct the errors and try again.");
+	}
+
+	[Subject("Home page")]
+	public class When_on_home_page
+	{
+		static IE Browser;
+
+		Establish context =
+			() => Browser = new IE();
+
+		Because of = () =>
+			{
+				Browser.GoTo("http://localhost:1337/");
+				Browser.WaitForComplete();
+			};
+
+		Cleanup after =
+			() => Browser.Close();
+
+		It should_show_add_details_link = 
+			() => Browser.Link(Find.ByText("Log On")).Exists.ShouldBeTrue();
 	}
 }
