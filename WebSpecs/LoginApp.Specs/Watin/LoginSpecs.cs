@@ -4,13 +4,22 @@ using WatiN.Core;
 
 namespace LoginApp.Specs.Watin
 {
-	[Subject("Home page")]
-	public class When_on_home_page
+	public abstract class WatinSpecs
 	{
-		static IE Browser;
+		internal static Browser Browser;
 
+		protected static Browser CreateBrowser()
+		{
+			Browser = new IE();
+			return Browser;
+		}
+	}
+
+	[Subject("Home page")]
+	public class When_on_home_page : WatinSpecs
+	{
 		Establish context =
-			() => Browser = new IE();
+			() => CreateBrowser();
 
 		Because of = () =>
 			{
