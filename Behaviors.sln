@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behaviors", "Behaviors\Behaviors\Behaviors.csproj", "{816A0690-7D5C-4B32-AB1D-51227875559A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Behaviors", "Behaviors\Behaviors.csproj", "{816A0690-7D5C-4B32-AB1D-51227875559A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
