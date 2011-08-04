@@ -35,15 +35,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Machine.Specifications.0.4.10.0\lib\Machine.Specifications.dll</HintPath>
     </Reference>
-    <Reference Include="Machine.Specifications.SeleniumSupport, Version=0.4.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Machine.Specifications.0.4.7.0\tools\Machine.Specifications.SeleniumSupport.dll</HintPath>
+    <Reference Include="Machine.Specifications.SeleniumSupport">
+      <HintPath>..\..\packages\Machine.Specifications.0.4.10.0\tools\Machine.Specifications.SeleniumSupport.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="ThoughtWorks.Selenium.Core, Version=0.0.0.0, Culture=neutral">
-      <HintPath>..\..\packages\Machine.Specifications.0.4.7.0\tools\ThoughtWorks.Selenium.Core.dll</HintPath>
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\packages\Machine.Specifications.0.4.10.0\tools\ThoughtWorks.Selenium.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
