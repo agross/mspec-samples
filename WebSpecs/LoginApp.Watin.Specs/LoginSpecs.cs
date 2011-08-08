@@ -14,6 +14,7 @@ namespace LoginApp.Specs.Watin
 		protected static void CreateBrowser()
 		{
 			Browser = new IE();
+            Browser.BringToFront();
 		}
 	}
 
