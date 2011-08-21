@@ -18,7 +18,7 @@ namespace LoginApp.Specs.Watin
 		}
 	}
 
-	[Subject("Log in with valid credentials")]
+	[Subject("Log in")]
 	public class When_logging_in_valid_credentials : WatinSpecs
 	{
 		Establish context = CreateBrowser;
@@ -36,7 +36,7 @@ namespace LoginApp.Specs.Watin
 			() => Browser.Title.ShouldContain("Home Page");
 	}
 
-	[Subject("Log in with invalid credentials")]
+	[Subject("Log in")]
 	public class When_logging_in_with_invalid_credentials : WatinSpecs
 	{
 		Establish context = CreateBrowser;

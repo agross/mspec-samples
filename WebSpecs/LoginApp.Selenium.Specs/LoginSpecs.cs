@@ -18,7 +18,7 @@ namespace LoginApp.Specs.Selenium
 			() => Selenium.Stop();
 	}
 
-	[Subject("Log in with valid credentials")]
+	[Subject("Log in")]
 	public class When_logging_in_valid_credentials : SeleniumSpecs
 	{
 		Establish context = CreateSelenium;
@@ -36,7 +36,7 @@ namespace LoginApp.Specs.Selenium
 			() => Selenium.GetAllWindowTitles().ShouldContain("Home Page");
 	}
 
-	[Subject("Log in with invalid credentials")]
+	[Subject("Log in")]
 	public class When_logging_in_with_invalid_credentials : SeleniumSpecs
 	{
 		Establish context = CreateSelenium;
