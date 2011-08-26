@@ -7,3 +7,5 @@ obj
 *.suo
 _ReSharper.*
 _Report
+
+*_mm_cache.bin
