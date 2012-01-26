@@ -1,1 +1,0 @@
-java -jar WebSpecs\Selenium-Server\selenium-server-standalone-2.4.0.jar

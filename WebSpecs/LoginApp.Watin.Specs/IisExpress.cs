@@ -29,7 +29,10 @@ namespace LoginApp.Watin.Specs
 
 		public void OnAssemblyComplete()
 		{
-			_iisExpress.Kill();
+			if (!_iisExpress.HasExited)
+			{
+				_iisExpress.Kill();
+			}
 		}
 	}
 }

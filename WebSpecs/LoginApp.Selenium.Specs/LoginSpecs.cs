@@ -1,37 +1,38 @@
+using System;
+
 using Machine.Specifications;
 
-using Selenium;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 
 namespace LoginApp.Selenium.Specs
 {
 	public abstract class SeleniumSpecs
 	{
-		internal static ISelenium Selenium;
-		
+		internal static ScreenshotRemoteWebDriver Selenium;
+
 		Establish context = () =>
 		{
-			Selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost:1337/");
-			Selenium.Start();
+			Selenium = new ScreenshotRemoteWebDriver(new Uri("http://localhost:9515"), DesiredCapabilities.Chrome());
 		};
 
 		Cleanup after =
-			() => Selenium.Stop();
+			() => Selenium.Close();
 	}
 
 	[Subject("Log in")]
 	public class When_logging_in_valid_credentials : SeleniumSpecs
 	{
 		Because of = () =>
-			{
-				Selenium.Open("/Account/LogOn");
-				Selenium.Type("UserName", "admin");
-				Selenium.Type("Password", "secret");
-				Selenium.Click("//input[@value='Log On']");
-				Selenium.WaitForPageToLoad("30000");
-			};
+		{
+			Selenium.Navigate().GoToUrl("http://localhost:1337/Account/LogOn");
+			Selenium.FindElement(By.Id("UserName")).SendKeys("admin");
+			Selenium.FindElement(By.Id("Password")).SendKeys("secret");
+			Selenium.FindElement(By.XPath("//input[@value='Log On']")).Click();
+		};
 
 		It should_display_the_home_page =
-			() => Selenium.GetAllWindowTitles().ShouldContain("Home Page");
+			() => Selenium.Title.ShouldContain("Home Page");
 	}
 
 	[Subject("Log in")]
@@ -39,29 +40,29 @@ namespace LoginApp.Selenium.Specs
 	{
 		Because of = () =>
 		{
-			Selenium.Open("/Account/LogOn");
-			Selenium.Type("UserName", "haxor");
-			Selenium.Type("Password", "password");
-			Selenium.Click("//input[@value='Log On']");
-			Selenium.WaitForPageToLoad("30000");
+			Selenium.Navigate().GoToUrl("http://localhost:1337/Account/LogOn");
+			Selenium.FindElement(By.Id("UserName")).SendKeys("haxor");
+			Selenium.FindElement(By.Id("Password")).SendKeys("password");
+			Selenium.FindElement(By.XPath("//input[@value='Log On']")).Click();
 		};
 
 		It should_display_an_error_message =
 			() => Selenium
-			      	.GetText("//div[@class=\"validation-summary-errors\"]/span")
+			      	.FindElement(By.CssSelector(".validation-summary-errors"))
+			      	.FindElement(By.TagName("span"))
+			      	.Text
 			      	.ShouldEqual("Login was unsuccessful. Please correct the errors and try again.");
 	}
-	
+
 	[Subject("Selenium support")]
 	public class When_a_specification_fails : SeleniumSpecs
 	{
 		Because of = () =>
 		{
-			Selenium.Open("/Account/LogOn");
-			Selenium.Type("UserName", "haxor");
-			Selenium.Type("Password", "password");
-			Selenium.Click("//input[@value='Log On']");
-			Selenium.WaitForPageToLoad("30000");
+			Selenium.Navigate().GoToUrl("http://localhost:1337/Account/LogOn");
+			Selenium.FindElement(By.Id("UserName")).SendKeys("haxor");
+			Selenium.FindElement(By.Id("Password")).SendKeys("password");
+			Selenium.FindElement(By.XPath("//input[@value='Log On']")).Click();
 		};
 
 		It should_supply_screenshots_detailing_the_error =

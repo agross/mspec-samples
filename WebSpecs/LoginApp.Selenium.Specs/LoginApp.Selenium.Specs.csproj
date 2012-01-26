@@ -31,26 +31,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="Machine.Specifications">
       <HintPath>..\..\packages\Machine.Specifications.0.5.3.0\lib\Machine.Specifications.dll</HintPath>
     </Reference>
-    <Reference Include="Machine.Specifications.SeleniumSupport">
-      <HintPath>..\..\packages\Machine.Specifications.0.5.3.0\tools\Machine.Specifications.SeleniumSupport.dll</HintPath>
+    <Reference Include="Machine.Specifications.WebDriverSupport">
+      <HintPath>..\..\packages\Machine.Specifications.0.5.3.0\tools\Machine.Specifications.WebDriverSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Drawing" />
-    <Reference Include="ThoughtWorks.Selenium.Core">
-      <HintPath>..\..\packages\Selenium.RC.2.17.0\lib\net40\ThoughtWorks.Selenium.Core.dll</HintPath>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\packages\Selenium.WebDriver.2.17.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChromeDriver.cs" />
+    <Compile Include="IisExpress.cs" />
     <Compile Include="LoginSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenshotRemoteWebDriver.cs" />
     <Compile Include="SeleniumSupport.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,23 +1,37 @@
 ﻿using System.IO;
 
-using Machine.Specifications.SeleniumSupport;
+using Machine.Specifications.WebDriverSupport;
 
-using Selenium;
+using OpenQA.Selenium;
 
 namespace LoginApp.Selenium.Specs
 {
-	public class SeleniumSupport : SeleniumResultSupplementer
+	public class SeleniumSupport : WebDriverResultSupplementer
 	{
 		static string TempPath;
 
 		protected override string ImagesPath
 		{
-			get { return GetTempPath(); }
+			get
+			{
+				return GetTempPath();
+			}
 		}
 
-		protected override ISelenium Selenium
+		protected override ITakesScreenshot Screenshotter
 		{
-			get { return SeleniumSpecs.Selenium; }
+			get
+			{
+				return SeleniumSpecs.Selenium;
+			}
+		}
+
+		protected override IWebDriver WebDriver
+		{
+			get
+			{
+				return SeleniumSpecs.Selenium;
+			}
 		}
 
 		static string GetTempPath()
