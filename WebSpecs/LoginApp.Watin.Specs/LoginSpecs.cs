@@ -8,21 +8,19 @@ namespace LoginApp.Watin.Specs
 	{
 		internal static Browser Browser;
 
-		Cleanup after =
-			() => Browser.Close();
-
-		protected static void CreateBrowser()
+		Establish context = () =>
 		{
 			Browser = new IE();
-            Browser.BringToFront();
-		}
+			Browser.BringToFront();
+		};
+
+		Cleanup after =
+			() => Browser.Close();
 	}
 
 	[Subject("Log in")]
 	public class When_logging_in_valid_credentials : WatinSpecs
 	{
-		Establish context = CreateBrowser;
-
 		Because of = () =>
 			{
 				Browser.GoTo("http://localhost:1337/Account/LogOn");
@@ -39,8 +37,6 @@ namespace LoginApp.Watin.Specs
 	[Subject("Log in")]
 	public class When_logging_in_with_invalid_credentials : WatinSpecs
 	{
-		Establish context = CreateBrowser;
-
 		Because of = () =>
 			{
 				Browser.GoTo("http://localhost:1337/Account/LogOn");
@@ -59,8 +55,6 @@ namespace LoginApp.Watin.Specs
 	[Subject("Watin support")]
 	public class When_a_specification_fails : WatinSpecs
 	{
-		Establish context = CreateBrowser;
-
 		Because of = () =>
 			{
 				Browser.GoTo("http://localhost:1337/Account/LogOn");

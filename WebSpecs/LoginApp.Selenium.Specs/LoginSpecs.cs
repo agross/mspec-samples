@@ -7,12 +7,12 @@ namespace LoginApp.Selenium.Specs
 	public abstract class SeleniumSpecs
 	{
 		internal static ISelenium Selenium;
-
-		protected static void CreateSelenium()
+		
+		Establish context = () =>
 		{
 			Selenium = new DefaultSelenium("localhost", 4444, "*chrome", "http://localhost:1337/");
 			Selenium.Start();
-		}
+		};
 
 		Cleanup after =
 			() => Selenium.Stop();
@@ -21,8 +21,6 @@ namespace LoginApp.Selenium.Specs
 	[Subject("Log in")]
 	public class When_logging_in_valid_credentials : SeleniumSpecs
 	{
-		Establish context = CreateSelenium;
-
 		Because of = () =>
 			{
 				Selenium.Open("/Account/LogOn");
@@ -39,8 +37,6 @@ namespace LoginApp.Selenium.Specs
 	[Subject("Log in")]
 	public class When_logging_in_with_invalid_credentials : SeleniumSpecs
 	{
-		Establish context = CreateSelenium;
-
 		Because of = () =>
 		{
 			Selenium.Open("/Account/LogOn");
@@ -59,8 +55,6 @@ namespace LoginApp.Selenium.Specs
 	[Subject("Selenium support")]
 	public class When_a_specification_fails : SeleniumSpecs
 	{
-		Establish context = CreateSelenium;
-
 		Because of = () =>
 		{
 			Selenium.Open("/Account/LogOn");
