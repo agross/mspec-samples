@@ -5,7 +5,7 @@ using System.IO;
 
 using Machine.Specifications;
 
-namespace LoginApp.Specs.Watin
+namespace LoginApp.Watin.Specs
 {
 	public class IisExpress : IAssemblyContext
 	{

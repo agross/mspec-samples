@@ -4,7 +4,7 @@ using Machine.Specifications.WatinSupport;
 
 using WatiN.Core;
 
-namespace LoginApp.Specs.Watin
+namespace LoginApp.Watin.Specs
 {
 	public class WatinSupport : WatinResultSupplementer
 	{

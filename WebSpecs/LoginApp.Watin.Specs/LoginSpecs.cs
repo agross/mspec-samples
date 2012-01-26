@@ -2,7 +2,7 @@
 
 using WatiN.Core;
 
-namespace LoginApp.Specs.Watin
+namespace LoginApp.Watin.Specs
 {
 	public abstract class WatinSpecs
 	{

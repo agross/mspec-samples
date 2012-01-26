@@ -2,7 +2,7 @@ using Machine.Specifications;
 
 using Selenium;
 
-namespace LoginApp.Specs.Selenium
+namespace LoginApp.Selenium.Specs
 {
 	public abstract class SeleniumSpecs
 	{
