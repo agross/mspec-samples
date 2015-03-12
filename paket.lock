@@ -1,0 +1,26 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+  specs:
+    Machine.Specifications (0.9.1)
+    Machine.Specifications.Runner.Console (0.9.0)
+    Machine.Specifications.Should (0.7.2)
+      Machine.Specifications (>= 0.7 < 1.0)
+    Microsoft.AspNet.Razor (3.2.3)
+    Microsoft.Owin (3.0.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.Host.SystemWeb (3.0.1)
+      Microsoft.Owin (>= 3.0.1)
+      Owin (>= 1.0)
+    Nancy (1.1)
+    Nancy.Owin (1.1)
+      Nancy (>= 1.1)
+      Owin (>= 1.0)
+    Nancy.Viewengines.Razor (1.1)
+      Microsoft.AspNet.Razor
+      Microsoft.AspNet.Razor (>= 2.0.30506) - framework: >= net40
+      Nancy (>= 1.1)
+    Owin (1.0)
+    Selenium.Support (2.45.0)
+      Selenium.WebDriver (>= 2.45.0)
+    Selenium.WebDriver (2.45.0)
+    WatiN (2.1.0)

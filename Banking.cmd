@@ -1,2 +1,2 @@
-@mkdir _Report 2> NUL
-packages\Machine.Specifications.0.5.3.0\tools\mspec-clr4.exe --html _Report\Banking.html "Banking\bin\Debug\Banking.dll"
+@mkdir _report 2> NUL
+packages\Machine.Specifications.Runner.Console\tools\mspec-clr4.exe --html _report\Banking.html "source\Banking\bin\Debug\Banking.dll"

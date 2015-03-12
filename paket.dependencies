@@ -1,0 +1,9 @@
+source https://www.nuget.org/api/v2
+
+nuget Machine.Specifications.Runner.Console ~> 0
+nuget Machine.Specifications.Should ~> 0
+nuget Microsoft.Owin.Host.SystemWeb ~> 3.0
+nuget Nancy.Owin ~> 1.0
+nuget Nancy.Viewengines.Razor ~> 1.1
+nuget Selenium.Support ~> 2.42
+nuget WatiN ~> 2.1

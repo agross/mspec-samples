@@ -1,0 +1,17 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "layout.cshtml";
+}
+
+<p>
+  To be able to access secure resources you need to be logged in.
+</p>
+<form action="/login/send?returnUrl=@(Url.RenderContext.Context.Request.Query.returnUrl)" method="post">
+  <label for="UserName">Username</label>
+  <input type="text" id="UserName" name="UserName" placeholder="Username">
+
+  <label for="Password">Password</label>
+  <input type="text" id="Password" name="Password" placeholder="Password">
+
+  <input type="submit" id="Submit">
+</form>

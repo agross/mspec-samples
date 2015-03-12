@@ -1,0 +1,83 @@
+----------ChromeDriver v2.12 (2014-10-27)----------
+Supports Chrome v36-40
+Resolved issue 946: ChromeDriver can't parse short git hashes from Chrome OS [Pri-0]
+Resolved issue 906: Chromedriver cannot be instantiated on CrOS with **kwargs [OS-Chrome, Pri-1]
+Resolved issue 944: When using mobile emulation, window.screen.height/width doesn't reflect phone's screen resolution [Pri-1]
+Resolved issue 916: Selenium (javascript) fails when switching to webview window in Chrome apps [Pri-2]
+Resolved issue 945: touch events sometimes don't work in mobile emulation mode [Pri-2]
+Resolved issue 611: Prefs capability should override custom user data dir prefs [Pri-3]
+Resolved issue 926: Chromedriver memory leak in devtools_client_impl.cc []
+
+----------ChromeDriver v2.11 (2014-10-07)----------
+Supports Chrome v36-40
+Resolved issue 815: testShouldHandleNewWindowLoadingProperly fails on ToT builds [OS-All, Pri-0]
+Resolved issue 908: No way to exclude switches on Android [OS-Android, Pri-0]
+Resolved issue 868: SelectElementHandlingTest.testShouldBeAbleToSelectMoreThanOneOptionFromASelectWhichAllowsMultipleChoices failing [OS-All, Pri-0]
+Resolved issue 399: Extend ChromeDriver capabilities to cover mobile emulation tools in Chrome DevTools [Pri-1, Type-Enhancement]
+Resolved issue 906: Chromedriver cannot be instantiated on CrOS with **kwargs [OS-Chrome, Pri-1]
+Resolved issue 776: ChromeDriver does not accept extensions of zip file format any more [OS-All, Pri-2]
+Resolved issue 799: Chrome starts with message "You are using an unsupported command-line flag: --ignore-certifcate-errors. Stability and security will suffer." [OS-All, Pri-3]
+
+----------ChromeDriver v2.10 (2014-05-01)----------
+Supports Chrome v33-36
+Resolved issue 780: Deny remote connections unless --whitelisted-ips is passed. [Pri-0]
+Resolved issue 698: implement touch flick command on Android [Pri-1]
+Resolved issue 760: Implement command to switch to parent frame [Pri-1]
+Resolved issue 152: Support --version switch [Pri-3]
+
+----------ChromeDriver v2.9 (2014-01-31)----------
+Supports Chrome v31-34
+Resolved issue 665: Use /data/local/tmp for command line flags on user builds [OS-Android, Pri-0]
+Resolved issue 696: Return window handle to App window (like Google Keep) in command driver.getWindowHandles [Pri-0]
+Resolved issue 694: Update http://chromedriver.storage.googleapis.com/LATEST_RELEASE for users to query for latest release and do automatic update in script [Pri-0]
+Resolved issue 690: Fix clicking on Map Area [Pri-0]
+Resolved issue 454: chromedriver didn't support Debian 7 [Pri-0]
+Resolved issue 638: chomedriver.exe 2.6 to 2.8 built on Win7 build bot always produce empty chromedriver.log on local windows machine. [Pri-0]
+Resolved issue 672: Wait 60 seconds for chrome to start up on all OS and 30 seconds for chrome shutdown on Mac and Linux. [Pri-0]
+Resolved issue 660: Port used for android adb forward leaks. [Pri-0]
+Resolved issue 676: LaunchApp method for launching Chrome apps using their ID [OS-All, Pri-0]
+
+----------ChromeDriver v2.8 (2013-12-16)----------
+Supports Chrome v30-33
+Resolved issue 638: Chomedriver 2.7, logging still broken. [Pri-0]
+Resolved issue 507: Cookie creation - Domain getting prefixed with a period "." [Pri-0]
+Resolved issue 516: Extensions with _generated_background_page no longer loading in 2.3 [Pri-0]
+Resolved issue 405: Can't type some non-ascii characters [OS-Windows, Pri-0]
+Resolved issue 627: With a keyboard layout != us send_keys does not send some digits characters (0, 2, 7, 9 ) [OS-Linux, Pri-0]
+
+----------ChromeDriver v2.7 (2013-11-22)----------
+Supports Chrome v30-33
+Resolved issue 615: ChromeDriver doesn't work well with auto detect proxy settings [OS-Windows, Pri-0]
+Resolved issue 614: Implement new redirectionless /session command [Pri-0]
+Resolved issue 625: logging broken on windows [Pri-0]
+Resolved issue 573: chromedriver crashes on windows occasionally [OS-Windows, Pri-1]
+
+----------ChromeDriver v2.6 (2013-11-04)----------
+Supports Chrome v29-32
+Resolved issue 599: Chromedriver failes after MacOS X Mavericks upgrade [OS-Mac, Pri-0, Type-Defect]
+Resolved issue 585: Return user data dir via capabilities []
+
+----------ChromeDriver v2.5 (2013-11-01)----------
+Supports Chrome v29-32
+Resolved issue 600: Support minidump for chrome crashes on Linux with a new capability minidump_path. [Pri-0]
+Resolved issue 569: A change in blink breaks scrolling an element into view [Pri-0]
+Resolved issue 554: Release notes broken [Pri-0]
+Resolved issue 545: hang when debugger is invoked via JS [Pri-0]
+
+----------ChromeDriver v2.4 (2013-09-30)----------
+Supports Chrome v29-32
+Resolved issue 444: chromedriver sometimes hangs when launching chrome (chrome fails to bind to debug port) [Pri-0]
+Resolved issue 529: WebDriver clients fail when attempting to use empty chromeOption binary string [Pri-0]
+Resolved issue 536: remote debugging port taken during startup [Pri-0]
+Resolved issue 520: Some commands hangs if the target window already crashes. []
+Resolved issue 519: Support JS heap snapshot []
+
+----------ChromeDriver v2.3 (2013-09-02)----------
+Resolved issue 309: Screenshot is blank from an VM instance without an open RDC connection [Pri-1]
+Resolved issue 445: chromedriver crashes when port is in use [Pri-1]
+Resolved issue 461: TouchUp, TouchDown, and TouchMove commands [OS-All, Pri-1]
+Resolved issue 489: No longer using packed extension id when loading custom extensions [Pri-3]
+Resolved issue 491: Extension does not have its _id_ [Pri-3]
+Resolved issue 497: unrecognized chrome option: useExistingBrowser [Pri-3]
+
+----------ChromeDriver v2.2 (2013-08-06)----------
